@@ -49,8 +49,17 @@ This issue specifically occurs during client-side transitions. A full page refre
 
 ## Steps to Reproduce the Bug
 
-1.  **Clone the repository or set up the project:**
-    Ensure you have the project files as structured in this repository. The key files for reproducing the bug are:
+1.  **Set up the project:**
+    *   **Option A: Clone the repository:**
+        ```bash
+        git clone https://github.com/r4sheed/nextjs-parallel-routes-404-repro.git
+        cd nextjs-parallel-routes-404-repro
+        ```
+    *   **Option B: Use CodeSandbox:**
+        Open the project directly in CodeSandbox: [https://codesandbox.io/p/github/r4sheed/nextjs-parallel-routes-404-repro/master?import=true](https://codesandbox.io/p/github/r4sheed/nextjs-parallel-routes-404-repro/master?import=true)
+        If using CodeSandbox, you can skip to step 3, as dependencies will be installed automatically.
+
+    Ensure you have the project files as structured. The key files for reproducing the bug are:
     *   `src/app/(main)/layout.tsx` (defines the main layout with the parallel route slot)
     *   `src/app/(main)/@breadcrumb/default.tsx`
     *   `src/app/(main)/@breadcrumb/[...catchAll]/page.tsx` (provides the content for the breadcrumb slot)
